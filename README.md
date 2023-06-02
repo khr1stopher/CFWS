@@ -1,2 +1,23 @@
-# CFWS
-Curso de Fundamentos de Web Scraping con Python y Xpath
+# Curso de Fundamentos de Web Scraping con Python y Xpath
+
+Web scraping: Es una técnica usada por data scientist y backend developers para extraer información de internet, accede a esto usando el protocolo de tranferencias de hipertexto (HTTP) o a través de un navegador. Los datos extraídos usualmente son guardados en una
+base de datos, incluso en una hoja de cálculo para posteriores análisis. Puede hacerse de manera automática (bot) o manualmente.
+
+Xpath: es un lenguaje que sirve para apuntar a las partes de un documento XML. Xpath modela un documento XML como un árbol de nodos. Existen diferentes tipos de nodos: elementos, atributos, texto.
+
+Corparations than use webscrapy
+- NSA
+- CIA
+
+## articles
+
+1. [14 Web Scraping Tools: Who They Are For & What They Excel At](https://www.scraperapi.com/blog/the-14-best-web-scraping-tools/)
+
+2. ParseHub is a system for automated scrap
+
+frameworks to do webscrapy
+
+1. scrapy
+2. Puppeteer
+3. playwright
+4. cypress
