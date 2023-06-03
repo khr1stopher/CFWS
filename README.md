@@ -15,6 +15,8 @@ Corparations than use webscrapy
 
 2. ParseHub is a system for automated scrap
 
+3. http://plasmasturm.org/log/xpath101/
+
 frameworks to do webscrapy
 
 1. scrapy
@@ -38,3 +40,8 @@ robots.txt
 proporciona información a los rastreadores de los buscadores sobre las páginas o los archivos que pueden solicitar o no de tu sitio web.
 
 https://developers.google.com/search/docs/crawling-indexing/robots/create-robots-txt?hl=es&visit_id=638213797110764645-1443811511&rd=1
+
+XPath esta formado por nodos/etiquetas
+
+site to practice scraping
+http://toscrape.com
