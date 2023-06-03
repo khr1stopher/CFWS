@@ -50,3 +50,20 @@ NODOS: a node is either a redistribution point or a communication endpoint /ETIQ
 En otras palabras Xpath nos permitirá navegar en los diferentes niveles de profundidad
 deseados con el fin extraer información. Para describir los nodos y relaciones con Xpath se usan una
 sintaxis de ejes.
+
+Para escribir expresiones se usara lo siguiente 
+$x(''). Entre las comillas se van a escribir las expresiones,
+las expresiones tienen diferentes símbolos que tienen una utilidad.
+
+Se describe la utilidad de cada expresión.
+
+/ hace referencia a la raíz, o tambien significa un salto entre nodos. 
+e.g /html/bodyMuestra todo lo que hay dentro del body de html
+// Sirve para acceder a todos los nodos con la etiqueta seleccionada. 
+e.g [*//span](//span) muestra todas las etiquetas span*
+.. Sirve para acceder a los nodos padre de la etiqueta tag. 
+e.g //span/.. accede a todos los nodos padre de span
+. Hace referencia al nodo actual. 
+e.g. //span/. es equivalent a //span
+@ Sirve para traer los atributos. 
+e.g //div/@class Nos da las clases de todos los divs

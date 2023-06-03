@@ -1,0 +1,10 @@
+http://quotes.toscrape.com
+$x('/')
+return de root document
+return [document]
+
+$x('//h1/text()')
+return h1 text
+
+$x('//span/../@class')
+returns the attribute class of the paterns of the all of the span
