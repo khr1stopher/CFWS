@@ -51,6 +51,8 @@ En otras palabras Xpath nos permitirá navegar en los diferentes niveles de prof
 deseados con el fin extraer información. Para describir los nodos y relaciones con Xpath se usan una
 sintaxis de ejes.
 
+Expresiones Xpath
+
 Para escribir expresiones se usara lo siguiente 
 $x(''). Entre las comillas se van a escribir las expresiones,
 las expresiones tienen diferentes símbolos que tienen una utilidad.
@@ -68,22 +70,57 @@ e.g. //span/. es equivalent a //span
 @ Sirve para traer los atributos. 
 e.g //div/@class Nos da las clases de todos los divs
 
-Expresiones Xpath
-Predicados Xpath
+all the examples was using [quotes](http://quotes.toscrape.com)
+
+### Predicados Xpath
 
 is using '[]' into a xpath expresion
 
-without
+without predicate
+```xpath
 $x('/html/body/div/div')
 return (2) [div.row.header-box, div.row]
+```
 
-with
+with predicate
+```xpath
 $x('/html/body/div/div[1]')
 return [div.row.header-box]
+```
 
-the last item
+for get the last item we user 'last()
+```xpath
 $x('/html/body/div/div[last()]')
 return [div.row]
+```
 
 with atributes
+```xpath
 $x('//span[@class="text"]/text()')
+```
+
+Operadores Xpath
+
+1. '!=' i want to get all the span without the class .text 
+```xpath
+$x('//span[@class!="text"]')
+(11) [span.tag-item, span.tag-item, span.tag-item, span.tag-item, span.tag-item, span.tag-item, span.tag-item, span.tag-item, span.tag-item, span.tag-item, span.sh-red]
+```
+2. 'position()' u can use this with the common operators
+```xpath
+$x('/html/body/div/div[position()>1]')
+```
+3. 'or' if any of the conditions is truth we'll get the span with them
+```xpath
+$x('//span[@class="text" or @class="tag-item"]')
+(20) [span.text, span.text, span.text, span.text, span.text, span.text, span.text, span.text, span.text, span.text, span.tag-item, span.tag-item, span.tag-item, span.tag-item, span.tag-item, span.tag-item, span.tag-item, span.tag-item, span.tag-item, span.tag-item]
+```
+4. 'and' we need both contentions to be true
+```xpath
+$x('//span[@class="text" and @class="tag-item"]')
+[]
+```
+
+
+$x('//span[not(@class)]')
+(11) [span, span, span, span, span, span, span, span, span, span, span]
