@@ -21,3 +21,15 @@ frameworks to do webscrapy
 2. Puppeteer
 3. playwright
 4. cypress
+
+http status category
+
+Informational responses (100 – 199)
+Successful responses (200 – 299)
+Redirection messages (300 – 399)
+Client error responses (400 – 499)
+Server error responses (500 – 599)
+
+hypertext markup language :v
+
+snipet: a lite piece of code
