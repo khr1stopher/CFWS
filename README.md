@@ -45,3 +45,8 @@ XPath esta formado por nodos/etiquetas
 
 site to practice scraping
 http://toscrape.com
+
+NODOS: a node is either a redistribution point or a communication endpoint /ETIQUETAS Un nodo puede contener a otros nodos.
+En otras palabras Xpath nos permitirá navegar en los diferentes niveles de profundidad
+deseados con el fin extraer información. Para describir los nodos y relaciones con Xpath se usan una
+sintaxis de ejes.
