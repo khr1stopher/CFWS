@@ -67,3 +67,23 @@ e.g //span/.. accede a todos los nodos padre de span
 e.g. //span/. es equivalent a //span
 @ Sirve para traer los atributos. 
 e.g //div/@class Nos da las clases de todos los divs
+
+Expresiones Xpath
+Predicados Xpath
+
+is using '[]' into a xpath expresion
+
+without
+$x('/html/body/div/div')
+return (2) [div.row.header-box, div.row]
+
+with
+$x('/html/body/div/div[1]')
+return [div.row.header-box]
+
+the last item
+$x('/html/body/div/div[last()]')
+return [div.row]
+
+with atributes
+$x('//span[@class="text"]/text()')
