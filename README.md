@@ -33,3 +33,8 @@ Server error responses (500 – 599)
 hypertext markup language :v
 
 snipet: a lite piece of code
+
+robots.txt
+proporciona información a los rastreadores de los buscadores sobre las páginas o los archivos que pueden solicitar o no de tu sitio web.
+
+https://developers.google.com/search/docs/crawling-indexing/robots/create-robots-txt?hl=es&visit_id=638213797110764645-1443811511&rd=1
