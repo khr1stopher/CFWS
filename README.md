@@ -189,3 +189,29 @@ x('//small[@class="author" and ends-with(.,"t")]/text()').map(x => x.wholeText)
 ```xpath
 $x('//small[@class="author" and matches(.,"A.*n")]/text()').map(x => x.wholeText)
 ```
+
+### xpath axes
+
+1. it's the same than use a point
+```xpath
+$x('/html/body/div/self::div')
+[div.container]
+```
+
+2. it's to get the children of the node
+```xpath
+$x('/html/body/div/child::div')
+(2) [div.row.header-box, div.row]
+```
+
+```xpath
+$x('/html/body/div/descendant::div')
+(26) [div.row.header-box, div.col-md-8, div.col-md-4, div.row, div.col-md-8, div.quote, div.tags, div.quote, div.tags, div.quote, div.tags, div.quote, div.
+tags, div.quote, div.tags, div.quote, div.tags, div.quote, div.tags, div.quote, div.tags, div.quote, div.tags, div.quote, div.tags, div.col-md-4.tags-box]
+```
+
+```xpath
+$x('/html/body/div/descendant-or-self::div')
+(27) [div.container, div.row.header-box, div.col-md-8, div.col-md-4, div.row, div.col-md-8, div.quote, div.tags, div.quote, div.tags, div.quote, div.tags, div.
+quote, div.tags, div.quote, div.tags, div.quote, div.tags, div.quote, div.tags, div.quote, div.tags, div.quote, div.tags, div.quote, div.tags, div.col-md-4.tags-box]
+```
