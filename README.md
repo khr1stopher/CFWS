@@ -160,3 +160,32 @@ $x('/html/body//div/@*')
 $x('//span[@class="text" and @itemprop="text"]/node()')
 (10) [text, text, text, text, text, text, text, text, text, text]
 ```
+
+### In-text search en Xpath
+
+1. starts-with
+```xpath
+$x('//small[@class="author" and starts-with(.,"A")]')
+(4) [small.author, small.author, small.author, small.author]
+```
+
+```xpath
+$x('//small[@class="author" and starts-with(.,"A")]/text()').map(x => x.wholeText)
+(4) ['Albert Einstein', 'Albert Einstein', 'Albert Einstein', 'André Gide']
+```
+
+2. using the function 'contains'
+```xpath
+$x('//small[@class="author" and contains(.,"Ro")]/text()').map(x => x.wholeText)
+(2) ['J.K. Rowling', 'Eleanor Roosevelt']
+```
+
+3. using the function 'ends-with'
+```xpath
+x('//small[@class="author" and ends-with(.,"t")]/text()').map(x => x.wholeText)
+```
+
+3. using the function 'matches'
+```xpath
+$x('//small[@class="author" and matches(.,"A.*n")]/text()').map(x => x.wholeText)
+```
