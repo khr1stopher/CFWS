@@ -124,3 +124,39 @@ $x('//span[@class="text" and @class="tag-item"]')
 
 $x('//span[not(@class)]')
 (11) [span, span, span, span, span, span, span, span, span, span, span]
+
+
+### Wildcards
+
+1. '/*' selecciona todos los nodos dentro del nodo seleccionado
+
+```xpath
+$x('/html/*')
+(2) [head, body]
+```
+
+2. '//*' selecciona todos los nodos que existen
+
+```xpath
+$x('//*')
+(153) [html, head, meta, title, link, link, style#operaUserStyle, style, body, div.container, div.row.header-box, div.col-md-8, h1, a, div.col-md-4, p, a, div.row, div.col-md-8, div.quote, span.text, span, small.author, a, div.tags, meta.keywords, a.tag, a.tag, a.tag, a.tag, div.quote, span.text, span, small.author, a, div.tags, meta.keywords, a.tag, a.tag, div.quote, span.text, span, small.author, a, div.tags, meta.keywords, a.tag, a.tag, a.tag, a.tag, a.tag, div.quote, span.text, span, small.author, a, div.tags, meta.keywords, a.tag, a.tag, a.tag, a.tag, div.quote, span.text, span, small.author, a, div.tags, meta.keywords, a.tag, a.tag, div.quote, span.text, span, small.author, a, div.tags, meta.keywords, a.tag, a.tag, a.tag, div.quote, span.text, span, small.author, a, div.tags, meta.keywords, a.tag, a.tag, div.quote, span.text, span, small.author, a, div.tags, meta.keywords, a.tag, a.tag, a.tag, …]
+```
+
+3. '/@*'  select all the los attributes inside the node selected
+```xpath
+$x('//span[@class="text"]/@*')
+(20) [class, itemprop, class, itemprop, class, itemprop, class, itemprop, class, itemprop, class, itemprop, class, itemprop, class, itemprop, class, itemprop, class, itemprop]
+```
+
+4. '//element/@*' select attributes of all the div elements in the body document
+
+```xpath
+$x('/html/body//div/@*')
+(48) [class, class, class, class, class, class, class, itemscope, itemtype, class, class, itemscope, itemtype, class, class, itemscope, itemtype, class, class, itemscope, itemtype, class, class, itemscope, itemtype, class, class, itemscope, itemtype, class, class, itemscope, itemtype, class, class, itemscope, itemtype, class, class, itemscope, itemtype, class, class, itemscope, itemtype, class, class, class]
+```
+
+5. with node() u select all inside the current node
+```xpath
+$x('//span[@class="text" and @itemprop="text"]/node()')
+(10) [text, text, text, text, text, text, text, text, text, text]
+```
