@@ -1,0 +1,4 @@
+links = '//h2[contains(@style, "font-size") and contains(@style, "line-height")]/a/@href'
+titulo = '//h2/span/text()'
+description = '//div[@class="lead"]/p/text()'
+content = '//div[@class="html-content"]/p[not(@class)]/text()'
